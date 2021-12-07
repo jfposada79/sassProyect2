@@ -1,0 +1,24 @@
+{
+  "name": "Trillo",
+  "version": "1.0.0",
+  "description": "watch>saTrillo",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css ",
+    
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass  prefix:css compress:css "
+  },
+  
+  "author": "Fernando Posada\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\"Fernando Posada\"",
+  "license": "ISC",
+ 
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    
+    "node-sass": "^6.0.1",
+    "postcss-cli": "^9.0.2"
+  }
+}
